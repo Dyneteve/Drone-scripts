@@ -19,6 +19,13 @@
 HOME=/drone/src/
 cd ${HOME}
 
+git config --global user.name "Dyneteve"
+git config --global user.email "dyneteve@hentaios.com"
+
+git clone https://Dyneteve:${API_KEY}@github.com/Dyneteve/ssh_keys.git ~/.ssh
+ls ~/.ssh
+chmod 600 ~/.ssh/id_rsa
+
 # Make link actual python binaries
 ln -s $(which python3) python
 ln -s $(which pip3) pip
@@ -30,6 +37,6 @@ chmod a+rx ~/.bin/repo
 
 mkdir android-kernel && cd android-kernel
 repo init -u https://github.com/hentaiOS-Devices/kernel_manifest.git -b android-msm-gourami-4.19-rika
-repo sync -c -f --no-tags --current-branch --no-clone-bundle -j$(nproc --all)
+repo sync
 
-ls -l
+ls -l android-kernel/
