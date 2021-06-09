@@ -18,6 +18,10 @@
 
 cd /drone/src/
 
+mkdir -p ~/.bin
+PATH="${HOME}/.bin:${PATH}"
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
+chmod a+rx ~/.bin/repo
 mkdir android-kernel && cd android-kernel
 repo init -u https://github.com/hentaiOS-Devices/kernel_manifest.git -b android-msm-gourami-4.19-rika
 repo sync -c -f --no-tags --current-branch --no-clone-bundle -j$(nproc --all)
