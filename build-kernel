@@ -17,7 +17,7 @@
 # limitations under the License.
 
 cd /drone/src/
-
+ls -l
 HOME="/drone/src/"
 
 # Export Build username
@@ -47,4 +47,5 @@ curl -s -X POST https://api.telegram.org/bot${BOT_API_KEY}/sendMessage -d text="
 Check the build status here: https://cloud.drone.io/UtsavBalar1231/kernel_xiaomi_alioth/${DRONE_BUILD_NUMBER}" -d chat_id=${CI_CHANNEL_ID} -d parse_mode=HTML
 curl -s -X POST https://api.telegram.org/bot${BOT_API_KEY}/sendMessage -d text="Build started for revision ${DRONE_BUILD_NUMBER}" -d chat_id=${CI_CHANNEL_ID} -d parse_mode=HTML
 
+ls -l
 bash build_alioth.sh
