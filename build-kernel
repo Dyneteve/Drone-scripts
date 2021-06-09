@@ -16,8 +16,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-cd /drone/src/
-HOME="/drone/src/"
+cd $HOME/android-kernel
 
 # Export Build username
 export KBUILD_BUILD_USER="UtsavTheCunt"
